@@ -1,0 +1,133 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Brand Colors: #0a7dbc (blue), #f7f9f8 (light), #030708 (dark) */
+  --background: #f7f9f8;
+  --foreground: #030708;
+  --card: #ffffff;
+  --card-foreground: #030708;
+  --popover: #ffffff;
+  --popover-foreground: #030708;
+  --primary: #0a7dbc;
+  --primary-foreground: #ffffff;
+  --secondary: #e8f4fa;
+  --secondary-foreground: #030708;
+  --muted: #e5e8e9;
+  --muted-foreground: #4a5568;
+  --accent: #0a7dbc;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #d1d5db;
+  --input: #d1d5db;
+  --ring: #0a7dbc;
+  --chart-1: #0a7dbc;
+  --chart-2: #25d366;
+  --chart-3: #030708;
+  --chart-4: #f7f9f8;
+  --chart-5: #e8f4fa;
+  --radius: 0.75rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #030708;
+  --sidebar-primary: #0a7dbc;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e8f4fa;
+  --sidebar-accent-foreground: #030708;
+  --sidebar-border: #d1d5db;
+  --sidebar-ring: #0a7dbc;
+  /* WhatsApp green */
+  --whatsapp: #25d366;
+  --whatsapp-foreground: #ffffff;
+}
+
+.dark {
+  --background: #030708;
+  --foreground: #f7f9f8;
+  --card: #0f1419;
+  --card-foreground: #f7f9f8;
+  --popover: #0f1419;
+  --popover-foreground: #f7f9f8;
+  --primary: #0a7dbc;
+  --primary-foreground: #ffffff;
+  --secondary: #1a2735;
+  --secondary-foreground: #f7f9f8;
+  --muted: #1a2735;
+  --muted-foreground: #9ca3af;
+  --accent: #0a7dbc;
+  --accent-foreground: #ffffff;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #374151;
+  --input: #374151;
+  --ring: #0a7dbc;
+  --chart-1: #0a7dbc;
+  --chart-2: #25d366;
+  --chart-3: #f7f9f8;
+  --chart-4: #030708;
+  --chart-5: #1a2735;
+  --sidebar: #0f1419;
+  --sidebar-foreground: #f7f9f8;
+  --sidebar-primary: #0a7dbc;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1a2735;
+  --sidebar-accent-foreground: #f7f9f8;
+  --sidebar-border: #374151;
+  --sidebar-ring: #0a7dbc;
+  --whatsapp: #25d366;
+  --whatsapp-foreground: #ffffff;
+}
+
+@theme inline {
+  --font-sans: 'Geist', 'Geist Fallback';
+  --font-mono: 'Geist Mono', 'Geist Mono Fallback';
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-whatsapp: var(--whatsapp);
+  --color-whatsapp-foreground: var(--whatsapp-foreground);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
