@@ -1,7 +1,6 @@
 import React from "react";
 import type { Metadata, Viewport } from "next";
 import { Geist } from "next/font/google";
-import { Analytics } from "@vercel/analytics/next";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
 import "./globals.css";
 
@@ -21,12 +20,8 @@ export const metadata: Metadata = {
     type: "website",
   },
   icons: {
-    icon: [
-      { url: "/icon-light-32x32.png", media: "(prefers-color-scheme: light)" },
-      { url: "/icon-dark-32x32.png", media: "(prefers-color-scheme: dark)" },
-      { url: "/icon.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-icon.png",
+    icon: [{ url: "/asis247_icono.svg", type: "image/svg+xml" }],
+    apple: "/asis247_icono.svg",
   },
 };
 
@@ -48,7 +43,6 @@ export default function RootLayout({
       <body className={`${_geist.className} antialiased`}>
         <GoogleAnalytics />
         {children}
-        <Analytics />
       </body>
     </html>
   );
